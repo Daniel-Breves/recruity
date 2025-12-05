@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+<body class="bg-zinc-950">
+    <main class="display flex flex-row gap-15 ml-25 mr-25 mt-25 mb-25">
+        <section class="w-150">
+        <h1 class="font-mono text-white text-9xl text-shadow-white text-shadow-lg font-bold">Sign Up on Recruity</h1>
+        </section>
+        //step one
+        <section class="bg-zinc-950 rounded-xl border-1 border-zinc-900 shadow-zinc-700 shadow-lg w-150 h-150" id="step_one">
+            <form class=" flex flex-col gap-10 ml-25 mr-25 mt-25 mb-25" action="../app/signup.php" method="post">
+                <input class="bg-zinc-900 text-white font-mono border-1 border-zinc-800 rounded-md w-100 h-15 text-xl" type="text" name="name" id="company-name" placeholder="insert the names companie:">
+                <input class="bg-zinc-900 text-white font-mono border-1 border-zinc-800 rounded-md w-100 h-15 text-xl" type="text" name="token" id="company-token" placeholder="insert the token companie:">
+                <button class="bg-white transition delay-150 duration-700 ease-in-out hover:-translate-y-1 hover:scale-110 w-25 h-12 text-medium font-mono rounded-md shadow-zinc-700 shadow-lg cursor-pointer ml-35" type="submit" id="companies-next-button">ok</button>
+            </form>
+        </section>
+        //step two
+                <section class="bg-zinc-950 rounded-xl border-1 border-zinc-900 shadow-zinc-700 shadow-lg w-150 h-150 flex hidden" id="step_two">
+                <form class=" flex flex-col gap-10 ml-25 mr-25 mt-25 mb-25" action="../app/signup.php" method="post" id="form-step-two">
+                <input class="bg-zinc-900 text-white font-mono border-1 border-zinc-800 rounded-md w-100 h-15 text-xl" type="text" name="name" placeholder="insert the names companie:">
+                <input class="bg-zinc-900 text-white font-mono border-1 border-zinc-800 rounded-md w-100 h-15 text-xl" type="text" name="token" placeholder="insert the token companie:">
+                <button class="bg-white transition delay-150 duration-700 ease-in-out hover:-translate-y-1 hover:scale-110 w-25 h-12 text-medium font-mono rounded-md shadow-zinc-700 shadow-lg cursor-pointer ml-35" type="submit" id="companies">ok</button>
+            </form>
+        </section>
+    </main>
+            <script src="../js/cadastro.js"></script>
 </body>
 </html>
